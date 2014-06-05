@@ -2,7 +2,7 @@
 
 
 ###Why
-Zhihu (知乎) users would like a way to measure their activities
+[Zhihu (知乎)](http://www.zhihu.com/explore) users would like a way to measure their activities
 
 ###How
 Collect and share data on Zhihu (知乎) users
