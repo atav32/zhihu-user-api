@@ -34,7 +34,7 @@ INSTALLED_APPS = (
 
     # requirements
     'south',
-    #'lettuce.django',
+    'lettuce.django',
 
     # default
     'django.contrib.admin',
