@@ -1,11 +1,11 @@
-Zhihu User API
-==============
+##Zhihu (知乎) User API
 
-#Why
-Zhihu users would like a way to measure their activities
 
-#How
-Collect and share data on Zhihu users
+###Why
+Zhihu (知乎) users would like a way to measure their activities
 
-#What
+###How
+Collect and share data on Zhihu (知乎) users
+
+###What
 A RESTful API for Zhihu (知乎) user information
