@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@#h(58*u9c$an@aslkwv@#!g^msmnd@e&-u%qol0#doqmpir)0'
+SECRET_KEY = os.environ.get("SECRET_KEY", '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'south',
+    'users',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,10 +60,10 @@ WSGI_APPLICATION = 'zhihuUserApi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'mydb',                      # Or path to database file if using sqlite3.
+        'NAME': os.environ.get("DB_NAME", ''),                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'myuser',
-        'PASSWORD': 'password',
+        'USER': os.environ.get("DB_USER", ''),
+        'PASSWORD': os.environ.get("DB_PASSWORD", ''),
         'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
