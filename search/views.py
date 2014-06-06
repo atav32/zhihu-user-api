@@ -8,4 +8,5 @@ class SearchPageView(TemplateView):
     def get(self, request, *args, **kwargs):
         form = SearchForm()
         template_name = 'search.html'
-        return render(request, template_name)
+        context = {'form': form}
+        return render(request, template_name, context)

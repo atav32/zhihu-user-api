@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
 {% block search_form %}
-	<form name="{{ form.form_name }}" novalidate method="get" action="." {% block form_ctrl %}{% endblock %}>
-            {% csrf_token %}
-            {{ form }}
-	</form>
+{% csrf_token %}
+{{ form }}
 {% endblock search_form %}
