@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'users',
+    'zhihuUser',
 
     # requirements
     'south',
