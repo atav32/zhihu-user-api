@@ -5,3 +5,4 @@ south==0.8.4
 djangorestframework
 markdown
 django-filter
+django-angular
