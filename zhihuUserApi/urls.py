@@ -1,5 +1,6 @@
 from django.conf.urls import url, patterns, include
 from django.contrib.auth.models import User, Group
+from django.contrib import admin
 from rest_framework import viewsets, routers
 from zhihuUser.models import ZhihuUser
 
@@ -18,5 +19,6 @@ router.register(r'api', ZhihuUserViewSet)
 # Additionally, we include login URLs for the browseable API.
 urlpatterns = patterns('',
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 )
